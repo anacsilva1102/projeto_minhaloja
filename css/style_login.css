@@ -1,0 +1,166 @@
+/* IMPORTANDO A FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Roboto,sans-serif;
+}
+
+/* VARIÁVEIS */
+:root{
+    --cor01:#13011d;
+    --cor02:#d862f0;
+    --cor03:#d5a0f3;
+    --branca:#fdf9f9;
+}
+
+/* MAIN */
+#geral{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* CABEÇALHO */
+#cabecalho{
+    width:100%;
+    height:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+/* LOGO */
+#logo{
+    font-size:2em;
+    font-weight:bold;
+    color:var(--cor02);
+}
+
+/* MENU */
+#menu ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    align-items:center;
+}
+
+#menu ul img{
+    width:25px;
+    height:25px;
+}
+
+#menu a{
+    text-decoration:none;
+    color:var(--cor03);
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+#menu a:hover{
+    color:var(--cor02);
+}
+
+/* BARRA DE PESQUISA */
+
+#pesquisa{
+    width:100%;
+    height:180px;
+    background-color:var(--cor03);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#pesquisa input{
+    width:650px;
+    height:70px;
+    border:none;
+    border-radius:8px;
+    padding:15px;
+    font-size:18px;
+}
+
+/* LOGIN */
+
+#login{
+    width:500px;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:40px;
+    margin:50px auto;
+    box-shadow:0px 5px 15px rgba(0,0,0,.15);
+}
+
+#login h2{
+    text-align:center;
+    color:var(--cor02);
+    margin-bottom:30px;
+    font-size:2em;
+}
+
+#frm-login{
+    display:flex;
+    flex-direction:column;
+}
+
+#frm-login label{
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:8px;
+}
+
+.input001{
+    width:100%;
+    height:45px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+.btnEntrar{
+    width:100%;
+    height:45px;
+    margin-top:30px;
+    border:none;
+    border-radius:5px;
+    background:var(--cor03);
+    color:var(--cor01);
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btnEntrar:hover{
+    background:var(--cor02);
+    color:white;
+}
+
+/* RODAPÉ */
+
+#rodape{
+    width:100%;
+    background-color:var(--cor03);
+    padding:20px;
+    margin-top:50px;
+    text-align:center;
+}
+
+#rodape h2{
+    margin:5px;
+    color:var(--cor01);
+}
+
+#rodape p{
+    margin-top:10px;
+    color:var(--cor01);
+}

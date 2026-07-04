@@ -1,0 +1,187 @@
+@import url(style_estrutura_pagina.css);
+/* IMPORTANDO FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Roboto,sans-serif;
+}
+
+/* VARIÁVEIS */
+:root{
+    --cor01:#13011d;
+    --cor02:#d862f0;
+    --cor03:#d5a0f3;
+    --branca:#ffffff;
+}
+
+/* MAIN */
+#geral{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* CABEÇALHO */
+#cabecalho{
+    width:100%;
+    height:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+/* MENU */
+#menu ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+#menu ul img{
+    width:25px;
+    height:25px;
+}
+
+#menu a{
+    text-decoration:none;
+    color:var(--cor02);
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+#menu a:hover{
+    color:var(--cor03);
+}
+
+/* PESQUISA */
+#pesquisa{
+    width:100%;
+    height:180px;
+    background:var(--cor03);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#pesquisa input{
+    width:650px;
+    height:70px;
+    border:none;
+    border-radius:8px;
+    padding:15px;
+    font-size:18px;
+}
+
+/* FORMULÁRIO */
+
+#form{
+    width:700px;
+    margin:40px auto;
+    padding:30px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    background:#f8f8f8;
+}
+
+#form h3{
+    text-align:center;
+    margin-bottom:25px;
+    color:var(--cor02);
+    font-size:28px;
+}
+
+#frm-pessoa{
+    display:flex;
+    flex-direction:column;
+}
+
+#frm-pessoa label{
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:var(--cor01);
+}
+
+/* CAMPOS */
+
+.input001{
+    width:100%;
+    height:40px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.input002{
+    width:250px;
+    height:40px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+/* CHECKBOX */
+
+#novidades{
+    margin-top:20px;
+    margin-right:10px;
+}
+
+/* BOTÕES */
+
+.btnCadastrar{
+    width:220px;
+    height:45px;
+    margin-top:25px;
+    background:var(--cor03);
+    color:var(--cor01);
+    border:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btnCadastrar:hover{
+    background:var(--cor02);
+    color:white;
+}
+
+.btnLimpar{
+    width:220px;
+    height:45px;
+    margin-top:15px;
+    background:var(--cor01);
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btnLimpar:hover{
+    background:#444;
+}
+
+/* RODAPÉ */
+
+#rodape{
+    width:100%;
+    background:var(--cor03);
+    padding:20px;
+    text-align:center;
+    margin-top:40px;
+}
+
+#rodape h2{
+    margin:5px;
+}
+
+#rodape p{
+    margin-top:10px;
+}
