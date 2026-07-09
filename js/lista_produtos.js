@@ -201,3 +201,4 @@ const produtos = [
     }
 
 ];
+export{produtos}
