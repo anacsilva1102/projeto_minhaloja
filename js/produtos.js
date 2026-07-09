@@ -9,8 +9,8 @@ const listarProdutos = () => {
 
     produtos.forEach((elem, i) => {
 
-        const divCards = document.createElement('div')
-        divCards.setAttribute('class', 'card')
+        const divCard = document.createElement('div')
+        divCard.setAttribute('class', 'card')
     
         const imgCard = document.createElement('img')
         imgCard.setAttribute('src', elem.caminho_imagem)
@@ -24,10 +24,20 @@ const listarProdutos = () => {
     
         const btnCard = document.createElement('button')
         btnCard.setAttribute('class', 'btn-add')
+        btnCard.innerHTML = 'Adicionar'
+
+        divCard.appendChild(imgCard)
+        divCard.appendChild(pCard)
+        divCard.appendChild(h2Card)
+        divCard.appendChild(btnCard)
+
+        sectionCards.appendChild(divCard)
     
     })
 
 }
+
+listarProdutos()
 
 
 
