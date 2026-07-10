@@ -5,7 +5,7 @@ const produtos = [
         descricao_produto: "Conjunto Aurora",
         valor_unitario: 50.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Aurora.jpg",
+        caminho_imagem: "../imagens/Conjunto Aurora.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -15,7 +15,7 @@ const produtos = [
         descricao_produto: "Conjunto Bella",
         valor_unitario: 60.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Bella.jpg",
+        caminho_imagem: "../imagens/Conjunto Bella.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -25,7 +25,7 @@ const produtos = [
         descricao_produto: "Conjunto Camélia",
         valor_unitario: 35.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Camélia.jpg",
+        caminho_imagem: "../imagens/Conjunto Camélia.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -35,7 +35,7 @@ const produtos = [
         descricao_produto: "Conjunto Flora",
         valor_unitario: 30.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Flora.jpg",
+        caminho_imagem: "../imagens/Conjunto Flora.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -45,7 +45,7 @@ const produtos = [
         descricao_produto: "Conjunto Ísis",
         valor_unitario: 70.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Ísis.jpg",
+        caminho_imagem: "../imagens/Conjunto Ísis.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -55,7 +55,7 @@ const produtos = [
         descricao_produto: "Conjunto Jade",
         valor_unitario: 130.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Jade.jpg",
+        caminho_imagem: "../imagens/Conjunto Jade.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -65,7 +65,7 @@ const produtos = [
         descricao_produto: "Conjunto Lavanda",
         valor_unitario: 50.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Lavanda.jpg",
+        caminho_imagem: "../imagens/Conjunto Lavanda.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -75,7 +75,7 @@ const produtos = [
         descricao_produto: "Conjunto Luna",
         valor_unitario: 135.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Luna.jpg",
+        caminho_imagem: "../imagens/Conjunto Luna.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -85,7 +85,7 @@ const produtos = [
         descricao_produto: "Conjunto Pérola",
         valor_unitario: 175.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Pérola.jpg",
+        caminho_imagem: "../imagens/Conjunto Pérola.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -95,7 +95,7 @@ const produtos = [
         descricao_produto: "Conjunto Praia Maré",
         valor_unitario: 65.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Praia Maré.jpg",
+        caminho_imagem: "../imagens/Conjunto Praia Maré.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -105,7 +105,7 @@ const produtos = [
         descricao_produto: "Conjunto Verona",
         valor_unitario: 139.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Conjunto Verona.jpg",
+        caminho_imagem: "../imagens/Conjunto Verona.jpg",
         id_secao: 1,
         secao: "Conjuntos"
     },
@@ -115,7 +115,7 @@ const produtos = [
         descricao_produto: "Look Siena",
         valor_unitario: 155.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Look Siena.jpg",
+        caminho_imagem: "../imagens/Look Siena.jpg",
         id_secao: 2,
         secao: "Looks"
     },
@@ -125,7 +125,7 @@ const produtos = [
         descricao_produto: "Vestido Amélia",
         valor_unitario: 140.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Vestido Amélia.jpg",
+        caminho_imagem: "../imagens/Vestido Amélia.jpg",
         id_secao: 3,
         secao: "Vestidos"
     },
@@ -135,7 +135,7 @@ const produtos = [
         descricao_produto: "Vestido Celeste",
         valor_unitario: 145.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Vestido Celeste.jpg",
+        caminho_imagem: "../imagens/Vestido Celeste.jpg",
         id_secao: 3,
         secao: "Vestidos"
     },
@@ -145,7 +145,7 @@ const produtos = [
         descricao_produto: "Vestido de crochê",
         valor_unitario: 160.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Vestido de crochê.jpg",
+        caminho_imagem: "../imagens/Vestido de crochê.jpg",
         id_secao: 3,
         secao: "Vestidos"
     },
@@ -155,7 +155,7 @@ const produtos = [
         descricao_produto: "Vestido Florença",
         valor_unitario: 150.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Vestido Florença.jpg",
+        caminho_imagem: "../imagens/Vestido Florença.jpg",
         id_secao: 3,
         secao: "Vestidos"
     },
@@ -165,7 +165,7 @@ const produtos = [
         descricao_produto: "Vestido Jasmine",
         valor_unitario: 145.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Vestido Jasmine.jpg",
+        caminho_imagem: "../imagens/Vestido Jasmine.jpg",
         id_secao: 3,
         secao: "Vestidos"
     },
@@ -175,7 +175,7 @@ const produtos = [
         descricao_produto: "Vestido Pérola",
         valor_unitario: 170.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Vestido Pérola.jpg",
+        caminho_imagem: "../imagens/Vestido Pérola.jpg",
         id_secao: 3,
         secao: "Vestidos"
     },
@@ -185,7 +185,7 @@ const produtos = [
         descricao_produto: "Vestido Safira",
         valor_unitario: 165.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Vestido Safira.jpg",
+        caminho_imagem: "../imagens/Vestido Safira.jpg",
         id_secao: 3,
         secao: "Vestidos"
     },
@@ -195,7 +195,7 @@ const produtos = [
         descricao_produto: "Vestido Valentina",
         valor_unitario: 145.00,
         unidade: "UN",
-        caminho_imagem: "imagens/Vestido Valentina.jpg",
+        caminho_imagem: "../imagens/Vestido Valentina.jpg",
         id_secao: 3,
         secao: "Vestidos"
     }
