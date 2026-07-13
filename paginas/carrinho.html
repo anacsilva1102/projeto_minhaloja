@@ -2,173 +2,227 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Carrinho - Maison Crochê</title>
 
     <link rel="stylesheet" href="../css/style_carrinho.css">
+
 </head>
+
 
 <body>
 
-    <main id="geral">
 
-        <header id="cabecalho">
+<main id="geral">
 
-            <div id="logo">
-                Maison Crochê
-            </div>
 
-            <nav id="menu">
+<header id="cabecalho">
 
-                <ul>
 
-                    <li>
-                        <a href="../index.html">
-                            <img src="../imagens/icones/inicio.png" alt="Início">
-                        </a>
-                    </li>
+<div id="logo">
+    Maison Crochê
+</div>
 
-                    <li>
-                        <a href="cadastro.html">
-                            <img src="../imagens/icones/cadastro.png" alt="Cadastro">
-                        </a>
-                    </li>
 
-                    <li>
-                        <a href="sobre.html">
-                            <img src="../imagens/icones/sobre.png" alt="Sobre">
-                        </a>
-                    </li>
 
-                    <li>
-                        <a href="login.html">
-                            <img src="../imagens/icones/login.png" alt="Login">
-                        </a>
-                    </li>
+<nav id="menu">
 
-                    <li>
-                        <a href="carrinho.html">
-                            <img src="../imagens/icones/carrinho.png" alt="Carrinho">
-                        </a>
-                    </li>
+<ul>
 
-                </ul>
 
-            </nav>
+<li>
+<a href="../index.html">
+<img src="../imagens/icones/inicio.png" alt="Início">
+</a>
+</li>
 
-        </header>
 
-    
-        <section id="carrinho">
 
-            <h2>Meu Carrinho</h2>
+<li>
+<a href="cadastro.html">
+<img src="../imagens/icones/cadastro.png" alt="Cadastro">
+</a>
+</li>
 
-            <table>
 
-                <tr>
-                    <th>Imagem</th>
-                    <th>Produto</th>
-                    <th>Quantidade</th>
-                    <th>Preço</th>
-                    <th>Subtotal</th>
-                </tr>
 
-                <tr>
+<li>
+<a href="sobre.html">
+<img src="../imagens/icones/sobre.png" alt="Sobre">
+</a>
+</li>
 
-                    <td>
-                        <img src="../imagens/Conjunto Aurora.jpg" alt="Conjunto Aurora" class="img-produto">
-                    </td>
 
-                    <td>Conjunto Aurora</td>
 
-                    <td>
-                        <input type="number" value="1" min="1">
-                    </td>
+<li>
+<a href="login.html">
+<img src="../imagens/icones/login.png" alt="Login">
+</a>
+</li>
 
-                    <td>R$ 50,00</td>
 
-                    <td>R$ 50,00</td>
 
-                </tr>
+<li>
+<a href="carrinho.html">
+<img src="../imagens/icones/carrinho.png" alt="Carrinho">
+</a>
+</li>
 
-                <tr>
 
-                    <td>
-                        <img src="../imagens/Vestido Valentina.jpg" alt="Vestido Valentina" class="img-produto">
-                    </td>
+</ul>
 
-                    <td>Vestido Valentina</td>
+</nav>
 
-                    <td>
-                        <input type="number" value="2" min="1">
-                    </td>
 
-                    <td>R$ 145,00</td>
+</header>
 
-                    <td>R$ 290,00</td>
 
-                </tr>
 
-                <tr>
 
-                    <td>
-                        <img src="../imagens/Conjunto Bella.jpg" alt="Conjunto Bella" class="img-produto">
-                    </td>
 
-                    <td>Conjunto Bella</td>
+<section id="carrinho">
 
-                    <td>
-                        <input type="number" value="1" min="1">
-                    </td>
 
-                    <td>R$ 60,00</td>
+<h2>
+Meu Carrinho
+</h2>
 
-                    <td>R$ 60,00</td>
 
-                </tr>
 
-                <tr>
 
-                    <td colspan="4">
-                        <strong>Total</strong>
-                    </td>
+<table>
 
-                    <td>
-                        <strong>R$ 400,00</strong>
-                    </td>
 
-                </tr>
+<thead>
 
-            </table>
+<tr>
 
-            <div id="botoes">
+<th>Imagem</th>
 
-                <a href="../index.html">
-                    <button class="btnContinuar">
-                        Continuar Comprando
-                    </button>
-                </a>
+<th>Produto</th>
 
-                <button class="btnFinalizar">
-                    Finalizar Compra
-                </button>
+<th>Preço</th>
 
-            </div>
+<th>Quantidade</th>
 
-        </section>
+<th>Subtotal</th>
 
-        <footer id="rodape">
+<th>Ação</th>
 
-            <h2>&copy; Maison Crochê</h2>
+</tr>
 
-            <h2>Exclusividade em cada ponto.</h2>
+</thead>
 
-            <p>Formas de pagamento: Pix, Cartão de Débito e Crédito.</p>
 
-        </footer>
 
-    </main>
+<tbody id="listaCarrinho">
+
+
+</tbody>
+
+
+
+<tfoot>
+
+
+<tr>
+
+<td colspan="4">
+
+<strong>
+Total:
+</strong>
+
+</td>
+
+
+<td colspan="2" id="total">
+
+R$ 0,00
+
+</td>
+
+
+</tr>
+
+
+</tfoot>
+
+
+
+</table>
+
+
+
+
+
+<div id="botoes">
+
+
+<a href="../index.html">
+
+<button class="btnContinuar">
+
+Continuar Comprando
+
+</button>
+
+</a>
+
+
+
+
+<button class="btnFinalizar">
+
+Finalizar Compra
+
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<footer id="rodape">
+
+
+<h2>
+&copy; Maison Crochê
+</h2>
+
+
+<h2>
+Exclusividade em cada ponto.
+</h2>
+
+
+<p>
+Formas de pagamento: Pix, Cartão de Débito e Crédito.
+</p>
+
+
+</footer>
+
+
+
+</main>
+
+
+
+
+<script src="../js/carrinho.js"></script>
+
 
 </body>
 

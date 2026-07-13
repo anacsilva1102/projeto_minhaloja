@@ -1,166 +1,540 @@
 /* IMPORTANDO A FONTE */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 
+
+
 /* CONFIGURAÇÕES GERAIS */
+
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:Roboto,sans-serif;
+
 }
 
-/* VARIÁVEIS */
+
+
+
 :root{
-    --cor01:#13011d;
-    --cor02:#d862f0;
-    --cor03:#d5a0f3;
-    --branca:#fdf9f9;
+
+    --marrom:#8b5e3c;
+    --marrom-escuro:#6e472c;
+    --creme:#fff8f0;
+    --bege:#f0dfcd;
+    --branco:#ffffff;
+
 }
 
-/* MAIN */
+
+
+
+
+body{
+
+    background:var(--creme);
+
+    color:#4b3528;
+
+}
+
+
+
+
+
 #geral{
+
     width:100%;
+
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
+
 }
 
-/* CABEÇALHO */
+
+
+
+
+
+/* ================= CABEÇALHO ================= */
+
+
+
 #cabecalho{
+
+
     width:100%;
+
+
     height:100px;
+
+
     display:flex;
+
+
     justify-content:space-between;
+
+
     align-items:center;
-    padding:20px 60px;
+
+
+    padding:20px 80px;
+
+
+    background:white;
+
+
+    box-shadow:0 3px 15px #0002;
+
+
 }
 
-/* LOGO */
+
+
+
+
 #logo{
-    font-size:2em;
+
+
+    font-size:35px;
+
+
     font-weight:bold;
-    color:var(--cor02);
+
+
+    color:var(--marrom);
+
+
 }
 
-/* MENU */
+
+
+
+
 #menu ul{
+
+
     display:flex;
+
+
     gap:30px;
+
+
     list-style:none;
+
+
     align-items:center;
+
+
 }
 
-#menu ul img{
-    width:25px;
-    height:25px;
+
+
+
+
+#menu img{
+
+
+    width:35px;
+
+
+    height:35px;
+
+
+    transition:.3s;
+
+
 }
 
-#menu a{
-    text-decoration:none;
-    color:var(--cor03);
-    text-transform:uppercase;
-    font-weight:bold;
-    letter-spacing:4px;
+
+
+
+
+#menu img:hover{
+
+
+    transform:scale(1.15);
+
+
 }
 
-#menu a:hover{
-    color:var(--cor02);
-}
 
-/* BARRA DE PESQUISA */
+
+
+
+
+
+/* ================= PESQUISA ================= */
+
+
 
 #pesquisa{
+
+
     width:100%;
-    height:180px;
-    background-color:var(--cor03);
+
+
+    height:150px;
+
+
+    background:var(--bege);
+
+
     display:flex;
+
+
     justify-content:center;
+
+
     align-items:center;
+
+
 }
+
+
+
+
 
 #pesquisa input{
+
+
     width:650px;
-    height:70px;
+
+
+    height:60px;
+
+
     border:none;
-    border-radius:8px;
+
+
+    border-radius:30px;
+
+
     padding:15px;
+
+
     font-size:18px;
+
+
 }
 
-/* LOGIN */
+
+
+
+
+
+
+
+/* ================= LOGIN ================= */
+
+
 
 #login{
+
+
     width:500px;
+
+
     background:white;
-    border:1px solid #ddd;
-    border-radius:10px;
-    padding:40px;
+
+
     margin:50px auto;
-    box-shadow:0px 5px 15px rgba(0,0,0,.15);
+
+
+    padding:40px;
+
+
+    border-radius:20px;
+
+
+    box-shadow:0 5px 20px #0002;
+
+
 }
+
+
+
+
 
 #login h2{
+
+
     text-align:center;
-    color:var(--cor02);
+
+
+    color:var(--marrom);
+
+
+    font-size:32px;
+
+
     margin-bottom:30px;
-    font-size:2em;
+
+
 }
+
+
+
+
 
 #frm-login{
+
+
     display:flex;
+
+
     flex-direction:column;
+
+
 }
+
+
+
+
 
 #frm-login label{
+
+
     font-weight:bold;
+
+
     margin-top:15px;
+
+
     margin-bottom:8px;
+
+
+    color:#4b3528;
+
+
 }
+
+
+
+
 
 .input001{
+
+
     width:100%;
+
+
     height:45px;
-    padding:10px;
+
+
+    padding:12px;
+
+
     border:1px solid #ccc;
-    border-radius:5px;
-    font-size:16px;
+
+
+    border-radius:10px;
+
+
+    outline:none;
+
+
 }
+
+
+
+
+
+.input001:focus{
+
+
+    border-color:var(--marrom);
+
+
+}
+
+
+
+
+
+
+/* BOTÃO */
+
 
 .btnEntrar{
+
+
     width:100%;
+
+
     height:45px;
+
+
     margin-top:30px;
+
+
     border:none;
-    border-radius:5px;
-    background:var(--cor03);
-    color:var(--cor01);
+
+
+    border-radius:30px;
+
+
+    background:var(--marrom);
+
+
+    color:white;
+
+
     font-size:17px;
+
+
     font-weight:bold;
+
+
     cursor:pointer;
+
+
     transition:.3s;
+
+
 }
+
+
+
+
 
 .btnEntrar:hover{
-    background:var(--cor02);
-    color:white;
+
+
+    background:var(--marrom-escuro);
+
+
 }
 
-/* RODAPÉ */
+
+
+
+
+
+
+
+/* ================= RODAPÉ ================= */
+
+
 
 #rodape{
+
+
     width:100%;
-    background-color:var(--cor03);
-    padding:20px;
+
+
+    background:var(--marrom);
+
+
+    color:white;
+
+
+    padding:35px;
+
+
     margin-top:50px;
+
+
     text-align:center;
+
+
 }
+
+
+
+
 
 #rodape h2{
+
+
     margin:5px;
-    color:var(--cor01);
+
+
 }
 
+
+
+
+
 #rodape p{
+
+
     margin-top:10px;
-    color:var(--cor01);
+
+
+}
+
+
+
+
+
+
+
+
+/* ================= RESPONSIVO ================= */
+
+
+
+@media(max-width:700px){
+
+
+
+#cabecalho{
+
+
+    padding:20px;
+
+
+}
+
+
+
+#logo{
+
+
+    font-size:24px;
+
+
+}
+
+
+
+
+#menu img{
+
+
+    width:25px;
+
+
+    height:25px;
+
+
+}
+
+
+
+#login{
+
+
+    width:90%;
+
+
+}
+
+
+
+#pesquisa input{
+
+
+    width:85%;
+
+
+}
+
+
 }

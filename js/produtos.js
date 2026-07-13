@@ -1,135 +1,297 @@
 // IMPORTANDO OS PRODUTOS
 import { produtos } from "./lista_produtos.js";
 
-// PEGANDO ELEMENTO DO DOM
+
+console.log("Produtos Maison Crochê carregado");
+
+
+
+// ELEMENTOS DO HTML
+
 const sectionCards = document.querySelector("#cards");
 
-//CARREGANDO OS CARDS
-const listarProdutos = () => {
-   return produtos
-    montaCards(produtos)
-}
+const menuSecoes = document.querySelector("#menu-secoes");
 
-//MONTANDO OS MENUS SEÇÕES
-const menuSecoes = () => {
-
-    const mapSecoes = new Map()
-
-    //PECORRENDO O ARRAY PRODUTO
-    produtos.forEach((elem) => {
-        mapSecoes.set(elem.id_secao, elem)
-    })
-
-    //CONVERTENDO MAP EM ARRAY
-    const secoesFiltradas = Array.from(mapSecoes.values())
-
-    //RETORNANDO O ARRAY SELECIONADO
-    return secoesFiltradas
-}
-
-//FUNÇÃO PARA INSERIR OS MENUS NA LISTA
-const carregaSecoes = () => {
-
-    //PEGANDO O ELEMENTO ul menu-secoes DO DOM
-    const ulMenuSecoes = document.querySelector('#menu-secoes')
-
-    //LIMPANDO O ELEMENTO DO DOM
-    ulMenuSecoes.innerHTML = ''
-
-    //CRIANDO O MENU TODOS
- const liTodos = document.createElement('li')
-
- const aTodos = document.createElement('a')
- aTodos.setAttribute('href', '#')
- aTodos.setAttribute('class', 'lnk-secao')
- aTodos.innerHTML = 'TODOS'
-
- aTodos.addEventListener('click', () => {
-    montaCards(produtos)
-})
-
-liTodos.appendChild(aTodos)
-ulMenuSecoes.appendChild(liTodos)
+const pesquisa = document.querySelector("#pesquisa");
 
 
-    //CHAMANDO A FUNÇÃO menuSecoes E PERCORRENDO O ARRAY DE SEÇÕES JA SELECIONADAS
-    menuSecoes().forEach((elem, i) => {
 
-        //CRIANDO ELEMENTO li
-        const liMenu = document.createElement('li')
 
-        //CRIANDO O ELEMENTO a ATRIBUINDO O NOME DA SEÇÃO
-        const aMenu = document.createElement('a')
-        aMenu.setAttribute('href', '#')
-        aMenu.setAttribute('class', 'lnk-secao')
-        aMenu.innerHTML = elem.secao
-        aMenu.addEventListener('click', () => {
-            montaCards(filtroProduto(elem.id_secao))
-        })
+// MOSTRAR PRODUTOS
 
-        //ADICIONANDO O ELEMENTO FILHO a NO li
-        liMenu.appendChild(aMenu)
+const montaCards = (lista) => {
 
-        //ADICIONANDO O ELEMENTO FILHO liMenu NO OBJETO DOM
-        ulMenuSecoes.appendChild(liMenu)
 
-    })
+    sectionCards.innerHTML = "";
 
-}
 
-//FUNÇÃO FILTRO PRODUTO
-const filtroProduto = (idSecao) => {
 
-    //FILTRANDO OS PRODUTOS A PARTIR DA REPETIÇÃO filter
-    return produtos.filter(elem => elem.id_secao === idSecao)
+    lista.forEach((produto)=>{
 
-}
 
-//FUNÇÃO MONTA CARD
-const montaCards = (objProdutos) => {
+        let card = document.createElement("div");
 
-    //LIMPANDO A SECTION cards
-    sectionCards.innerHTML = ''
+        card.className = "card";
 
-    //PECORRENDO O ARRAY DE objProdutos
-    objProdutos.forEach((elem, i) => {
 
-        //CRIANDO O ELEMENTO DIV E DEFININDO O ATRIBUTO CARD
-        const divCard = document.createElement('div')
-        divCard.setAttribute('class', 'card')
 
-        //CRIANDO O ELEMENTO img E DEFININDO OS ATRIBUTOS SRC E ALT
-        const imgCard = document.createElement('img')
-        imgCard.setAttribute('src', elem.caminho_imagem)
-        imgCard.setAttribute('alt', elem.descricao_produto)
+        card.innerHTML = `
 
-        //CRIANDO O ELEMENTO p
-        const pCard = document.createElement('p')
-        pCard.innerHTML = elem.descricao_produto
 
-        //CRIANDO O ELEMENTO h2
-        const h2Card = document.createElement('h2')
-        h2Card.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.', ',')}`
+            <img 
+            src="${produto.caminho_imagem}" 
+            alt="${produto.descricao_produto}">
 
-        //CRIANDO O ELEMENTO button
-        const btnCard = document.createElement('button')
-        btnCard.setAttribute('class', 'btn-add')
-        btnCard.innerHTML = 'Adicionar'
 
-        //ADICIONANDO OS ELEMENTOS FILHOS AO divCard
-        divCard.appendChild(imgCard)
-        divCard.appendChild(pCard)
-        divCard.appendChild(h2Card)
-        divCard.appendChild(btnCard)
+            <p>
+            ${produto.descricao_produto}
+            </p>
 
-        //ADICIONANDO O divCard À SECTION CARDS
-        sectionCards.appendChild(divCard)
 
-    })
+            <h2>
+            R$ ${parseFloat(produto.valor_unitario)
+            .toFixed(2)
+            .replace(".",",")}
+            </h2>
 
-}
 
-//CHAMANDO AS FUNÇÕES
-listarProdutos()
-carregaSecoes()
+            <button class="btn-add">
+            Adicionar
+            </button>
 
+
+        `;
+
+
+
+        let botao = card.querySelector(".btn-add");
+
+
+
+        botao.addEventListener("click",()=>{
+
+
+            adicionarCarrinho(produto);
+
+
+        });
+
+
+
+        sectionCards.appendChild(card);
+
+
+
+    });
+
+
+
+};
+
+
+
+
+
+// ADICIONAR AO CARRINHO
+
+const adicionarCarrinho = (produto)=>{
+
+
+    let carrinho = JSON.parse(
+
+        localStorage.getItem("carrinho")
+
+    ) || [];
+
+
+
+
+    carrinho.push(produto);
+
+
+
+    localStorage.setItem(
+
+        "carrinho",
+
+        JSON.stringify(carrinho)
+
+    );
+
+
+
+    alert(
+
+        produto.descricao_produto + 
+        " adicionado ao carrinho!"
+
+    );
+
+
+
+};
+
+
+
+
+
+
+// CRIAR MENU DE CATEGORIAS
+
+const criarMenu = ()=>{
+
+
+    menuSecoes.innerHTML="";
+
+
+
+    let secoes = [];
+
+
+
+    produtos.forEach((produto)=>{
+
+
+        if(!secoes.includes(produto.secao)){
+
+            secoes.push(produto.secao);
+
+        }
+
+
+    });
+
+
+
+
+
+    let todos = document.createElement("li");
+
+
+    todos.innerHTML = `
+
+    <a href="#" class="lnk-secao">
+
+    Todos
+
+    </a>
+
+    `;
+
+
+
+    todos.addEventListener("click",(e)=>{
+
+
+        e.preventDefault();
+
+        montaCards(produtos);
+
+
+    });
+
+
+
+    menuSecoes.appendChild(todos);
+
+
+
+
+
+
+
+    secoes.forEach((secao)=>{
+
+
+        let li = document.createElement("li");
+
+
+        li.innerHTML = `
+
+        <a href="#" class="lnk-secao">
+
+        ${secao}
+
+        </a>
+
+        `;
+
+
+
+        li.addEventListener("click",(e)=>{
+
+
+            e.preventDefault();
+
+
+
+            let filtrados = produtos.filter(
+
+                produto=>produto.secao == secao
+
+            );
+
+
+
+            montaCards(filtrados);
+
+
+
+        });
+
+
+
+        menuSecoes.appendChild(li);
+
+
+
+    });
+
+
+
+};
+
+
+
+
+
+
+// PESQUISA
+
+pesquisa.addEventListener("keyup",()=>{
+
+
+    let texto = pesquisa.value.toLowerCase();
+
+
+
+    let resultado = produtos.filter((produto)=>{
+
+
+        return produto.descricao_produto
+        .toLowerCase()
+        .includes(texto);
+
+
+
+    });
+
+
+
+    montaCards(resultado);
+
+
+
+});
+
+
+
+
+
+
+// INICIAR PÁGINA
+
+
+montaCards(produtos);
+
+criarMenu();

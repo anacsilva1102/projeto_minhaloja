@@ -1,144 +1,492 @@
-@import url(style_estrutura_pagina.css);
-/* IMPORTANDO A FONTE */
+/* IMPORTANDO FONTE */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 
+
+
 /* CONFIGURAÇÕES GERAIS */
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Roboto,sans-serif;
+
 }
 
-/* VARIÁVEIS */
+
+
+
 :root{
-    --cor01:#13011d;
-    --cor02:#d862f0;
-    --cor03:#d5a0f3;
-    --branca:#ffffff;
+
+    --marrom:#8b5e3c;
+    --marrom-escuro:#6e472c;
+    --creme:#fff8f0;
+    --bege:#f0dfcd;
+    --branco:#ffffff;
+
 }
+
+
+
+
+
+body{
+
+    background:var(--creme);
+
+    color:#4b3528;
+
+}
+
+
+
+
+
 
 /* MAIN */
+
+
 #geral{
+
+
     width:100%;
+
+
     display:flex;
+
+
     flex-direction:column;
+
+
     align-items:center;
+
+
 }
 
-/* CABEÇALHO */
+
+
+
+
+
+
+
+/* ================= CABEÇALHO ================= */
+
+
+
 #cabecalho{
+
+
     width:100%;
+
+
     height:100px;
+
+
     display:flex;
+
+
     justify-content:space-between;
+
+
     align-items:center;
-    padding:20px 60px;
+
+
+    padding:20px 80px;
+
+
+    background:white;
+
+
+    box-shadow:0 3px 15px #0002;
+
+
 }
 
-/* LOGO */
+
+
+
+
 #logo{
-    font-size:2em;
+
+
+    font-size:35px;
+
+
     font-weight:bold;
-    color:var(--cor02);
+
+
+    color:var(--marrom);
+
+
 }
+
+
+
+
 
 /* MENU */
+
+
 #menu ul{
+
+
     display:flex;
+
+
     gap:30px;
+
+
     list-style:none;
+
+
 }
 
-#menu ul img{
-    width:25px;
-    height:25px;
+
+
+
+
+#menu img{
+
+
+    width:35px;
+
+
+    height:35px;
+
+
+    transition:.3s;
+
+
 }
 
-#menu a:link{
-    text-decoration:none;
-    color:var(--cor03);
-    text-transform:uppercase;
-    font-weight:bold;
+
+
+
+#menu img:hover{
+
+
+    transform:scale(1.15);
+
+
 }
 
-#menu a:visited{
-    color:var(--cor02);
-}
 
-#menu a:hover{
-    color:var(--cor01);
-}
 
-#menu a:active{
-    color:var(--cor03);
-}
 
-/* PESQUISA */
+
+
+
+
+/* ================= PESQUISA ================= */
+
+
+
 #pesquisa{
+
+
     width:100%;
-    height:180px;
-    background-color:var(--cor03);
+
+
+    height:150px;
+
+
+    background:var(--bege);
+
+
     display:flex;
+
+
     justify-content:center;
+
+
     align-items:center;
+
+
 }
+
+
+
 
 #pesquisa input{
+
+
     width:650px;
-    height:70px;
+
+
+    height:60px;
+
+
     border:none;
-    border-radius:8px;
-    padding:10px;
+
+
+    border-radius:30px;
+
+
+    padding:15px;
+
+
     font-size:18px;
+
+
 }
 
-#pesquisa input::placeholder{
-    color:var(--cor02);
-    font-style:italic;
-}
 
-/* SOBRE */
+
+
+
+
+
+/* ================= SOBRE ================= */
+
+
+
 #sobre{
+
+
     width:900px;
-    background-color:var(--branca);
-    margin:40px auto;
-    padding:40px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+
+    background:white;
+
+
+    margin:50px auto;
+
+
+    padding:50px;
+
+
+    border-radius:20px;
+
+
+    box-shadow:0 5px 20px #0002;
+
+
 }
+
+
+
+
 
 #sobre h2{
+
+
     text-align:center;
-    color:var(--cor02);
+
+
+    color:var(--marrom);
+
+
+    font-size:35px;
+
+
     margin-bottom:30px;
-    font-size:2em;
+
+
 }
+
+
+
+
 
 #sobre p{
+
+
     text-align:justify;
-    margin-bottom:20px;
+
+
     line-height:1.8;
+
+
     font-size:18px;
-    color:#333;
+
+
+    color:#4b3528;
+
+
+    margin-bottom:20px;
+
+
 }
 
-/* RODAPÉ */
-#rodape{
-    width:100%;
-    background-color:var(--cor03);
-    padding:20px;
+
+
+
+
+
+/* FRASE DE DESTAQUE */
+
+
+#sobre::after{
+
+
+    content:"Exclusividade em cada ponto.";
+
+
+    display:block;
+
+
     text-align:center;
-    margin-top:40px;
+
+
+    margin-top:30px;
+
+
+    color:var(--marrom);
+
+
+    font-size:22px;
+
+
+    font-weight:bold;
+
+
 }
+
+
+
+
+
+
+
+
+/* ================= RODAPÉ ================= */
+
+
+
+#rodape{
+
+
+    width:100%;
+
+
+    background:var(--marrom);
+
+
+    color:white;
+
+
+    padding:35px;
+
+
+    text-align:center;
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+
 
 #rodape h2{
-    color:var(--cor01);
+
+
     margin:5px;
+
+
 }
 
+
+
+
+
 #rodape p{
-    color:var(--cor01);
+
+
     margin-top:10px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ================= RESPONSIVO ================= */
+
+
+
+@media(max-width:900px){
+
+
+
+#sobre{
+
+
+    width:90%;
+
+
+}
+
+
+
+#cabecalho{
+
+
+    padding:20px;
+
+
+}
+
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+
+#logo{
+
+
+    font-size:24px;
+
+
+}
+
+
+
+
+#menu img{
+
+
+    width:25px;
+
+
+    height:25px;
+
+
+}
+
+
+
+#pesquisa input{
+
+
+    width:85%;
+
+
+}
+
+
+
+#sobre{
+
+
+    padding:30px;
+
+
+}
+
+
 }
