@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login - Maison Crochê</title>
@@ -12,174 +13,153 @@
 
 </head>
 
-
 <body>
- 
-    <script src="../js/login.js"></script>
 
 <main id="geral">
 
+    <header id="cabecalho">
 
-<header id="cabecalho">
+        <div id="logo">
 
+            Maison Crochê
 
-<div id="logo">
-    Maison Crochê
-</div>
+        </div>
 
+        <nav id="menu">
 
+            <ul>
 
-<nav id="menu">
+                <li>
 
-<ul>
+                    <a href="../index.html">
 
+                        <img src="../imagens/icones/inicio.png" alt="Início">
 
-<li>
-<a href="../index.html">
+                    </a>
 
-<img src="../imagens/icones/inicio.png" alt="Início">
+                </li>
 
-</a>
-</li>
+                <li>
 
+                    <a href="cadastro.html">
 
+                        <img src="../imagens/icones/cadastro.png" alt="Cadastro">
 
-<li>
-<a href="cadastro.html">
+                    </a>
 
-<img src="../imagens/icones/cadastro.png" alt="Cadastro">
+                </li>
 
-</a>
-</li>
+                <li>
 
+                    <a href="sobre.html">
 
+                        <img src="../imagens/icones/sobre.png" alt="Sobre">
 
-<li>
-<a href="sobre.html">
+                    </a>
 
-<img src="../imagens/icones/sobre.png" alt="Sobre">
+                </li>
 
-</a>
-</li>
+                <li>
 
+                    <a href="login.html">
 
+                        <img src="../imagens/icones/login.png" alt="Login">
 
-<li>
-<a href="login.html">
+                    </a>
 
-<img src="../imagens/icones/login.png" alt="Login">
+                </li>
 
-</a>
-</li>
+                <li>
 
+                    <a href="carrinho.html">
 
+                        <img src="../imagens/icones/carrinho.png" alt="Carrinho">
 
-<li>
-<a href="carrinho.html">
+                    </a>
 
-<img src="../imagens/icones/carrinho.png" alt="Carrinho">
+                </li>
 
-</a>
-</li>
+            </ul>
 
+        </nav>
 
-</ul>
+    </header>
 
+    <section id="login">
 
-</nav>
+        <h2>Entrar</h2>
 
+        <form id="frm-login">
 
-</header>
+            <label for="email">
 
+                E-mail
 
+            </label>
 
+            <input
+                type="email"
+                id="email"
+                class="input001"
+                placeholder="Digite seu e-mail"
+                required>
 
+            <label for="senha">
 
-<section id="login">
+                Senha
 
+            </label>
 
-<h2>Login</h2>
+            <input
+                type="password"
+                id="senha"
+                class="input001"
+                placeholder="Digite sua senha"
+                required>
 
+            <div id="botoes">
 
+                <input
+                    type="submit"
+                    value="Entrar"
+                    class="btnEntrar">
 
-<form id="frm-login">
+            </div>
 
+            <p id="cadastre">
 
-<label for="email">
-E-mail
-</label>
+                Não possui uma conta?
 
+                <a href="cadastro.html">
 
-<input
-type="email"
-id="email"
-required
-placeholder="Digite seu e-mail">
+                    Cadastre-se
 
+                </a>
 
+            </p>
 
+        </form>
 
+    </section>
 
-<label for="senha">
-Senha
-</label>
+    <footer id="rodape">
 
+        <h2>&copy; Maison Crochê</h2>
 
-<input
-type="password"
-id="senha"
-required
-placeholder="Digite sua senha">
+        <h2>Exclusividade em cada ponto.</h2>
 
+        <p>
 
+            Formas de pagamento: Pix, Cartão de Débito e Crédito.
 
+        </p>
 
-
-<input
-type="submit"
-value="Entrar"
-class="btnEntrar">
-
-
-
-</form>
-
-
-</section>
-
-
-
-
-
-<footer id="rodape">
-
-
-<h2>&copy; Maison Crochê</h2>
-
-
-<h2>
-Exclusividade em cada ponto.
-</h2>
-
-
-<p>
-Formas de pagamento: Pix, Cartão de Débito e Crédito.
-</p>
-
-
-</footer>
-
-
-
+    </footer>
 
 </main>
 
-
-
 <script src="../js/login.js"></script>
 
-
 </body>
-
 
 </html>

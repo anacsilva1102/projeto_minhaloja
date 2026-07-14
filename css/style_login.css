@@ -1,10 +1,4 @@
-/* IMPORTANDO A FONTE */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
-
-
-
-/* CONFIGURAÇÕES GERAIS */
 
 *{
 
@@ -15,526 +9,262 @@
 
 }
 
-
-
-
 :root{
 
     --marrom:#8b5e3c;
     --marrom-escuro:#6e472c;
     --creme:#fff8f0;
-    --bege:#f0dfcd;
     --branco:#ffffff;
 
 }
 
-
-
-
-
 body{
 
     background:var(--creme);
-
     color:#4b3528;
 
 }
-
-
-
-
 
 #geral{
 
     width:100%;
+    min-height:100vh;
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
 
 }
-
-
-
-
-
 
 /* ================= CABEÇALHO ================= */
 
-
-
 #cabecalho{
 
-
     width:100%;
-
-
     height:100px;
 
-
     display:flex;
-
-
     justify-content:space-between;
-
-
     align-items:center;
-
 
     padding:20px 80px;
 
-
     background:white;
 
-
-    box-shadow:0 3px 15px #0002;
-
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
 
 }
-
-
-
-
 
 #logo{
 
-
     font-size:35px;
-
-
     font-weight:bold;
-
-
     color:var(--marrom);
 
-
 }
-
-
-
-
 
 #menu ul{
 
-
     display:flex;
-
-
-    gap:30px;
-
-
     list-style:none;
-
-
+    gap:30px;
     align-items:center;
 
-
 }
-
-
-
-
 
 #menu img{
 
-
     width:35px;
-
-
-    height:35px;
-
-
     transition:.3s;
 
-
 }
-
-
-
-
 
 #menu img:hover{
 
-
-    transform:scale(1.15);
-
+    transform:scale(1.1);
 
 }
-
-
-
-
-
-
-
-/* ================= PESQUISA ================= */
-
-
-
-#pesquisa{
-
-
-    width:100%;
-
-
-    height:150px;
-
-
-    background:var(--bege);
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-}
-
-
-
-
-
-#pesquisa input{
-
-
-    width:650px;
-
-
-    height:60px;
-
-
-    border:none;
-
-
-    border-radius:30px;
-
-
-    padding:15px;
-
-
-    font-size:18px;
-
-
-}
-
-
-
-
-
-
-
 
 /* ================= LOGIN ================= */
 
-
-
 #login{
 
-
-    width:500px;
-
+    width:450px;
 
     background:white;
 
-
-    margin:50px auto;
-
+    margin:60px auto;
 
     padding:40px;
 
-
     border-radius:20px;
 
-
-    box-shadow:0 5px 20px #0002;
-
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
 
 }
-
-
-
-
 
 #login h2{
 
-
     text-align:center;
-
 
     color:var(--marrom);
 
+    margin-bottom:30px;
 
     font-size:32px;
 
-
-    margin-bottom:30px;
-
-
 }
-
-
-
-
 
 #frm-login{
 
-
     display:flex;
-
-
     flex-direction:column;
 
-
 }
-
-
-
-
 
 #frm-login label{
 
+    margin-top:15px;
+    margin-bottom:5px;
 
     font-weight:bold;
 
-
-    margin-top:15px;
-
-
-    margin-bottom:8px;
-
-
-    color:#4b3528;
-
-
 }
-
-
-
-
 
 .input001{
 
-
     width:100%;
 
-
     height:45px;
-
 
     padding:12px;
 
-
     border:1px solid #ccc;
-
 
     border-radius:10px;
 
-
     outline:none;
-
-
-}
-
-
-
-
-
-.input001:focus{
-
-
-    border-color:var(--marrom);
-
-
-}
-
-
-
-
-
-
-/* BOTÃO */
-
-
-.btnEntrar{
-
-
-    width:100%;
-
-
-    height:45px;
-
-
-    margin-top:30px;
-
-
-    border:none;
-
-
-    border-radius:30px;
-
-
-    background:var(--marrom);
-
-
-    color:white;
-
-
-    font-size:17px;
-
-
-    font-weight:bold;
-
-
-    cursor:pointer;
-
 
     transition:.3s;
 
+}
+
+.input001:focus{
+
+    border-color:var(--marrom);
 
 }
 
+#botoes{
 
-
-
-
-.btnEntrar:hover{
-
-
-    background:var(--marrom-escuro);
-
+    margin-top:30px;
 
 }
 
-
-
-
-
-
-
-
-/* ================= RODAPÉ ================= */
-
-
-
-#rodape{
-
+.btnEntrar{
 
     width:100%;
 
+    height:45px;
+
+    border:none;
+
+    border-radius:30px;
 
     background:var(--marrom);
 
-
     color:white;
 
+    font-size:16px;
 
-    padding:35px;
+    font-weight:bold;
 
+    cursor:pointer;
 
-    margin-top:50px;
+    transition:.3s;
 
+}
+
+.btnEntrar:hover{
+
+    background:var(--marrom-escuro);
+
+}
+
+#cadastre{
 
     text-align:center;
 
+    margin-top:25px;
 
 }
 
+#cadastre a{
 
+    color:var(--marrom);
 
+    font-weight:bold;
 
+    text-decoration:none;
+
+}
+
+#cadastre a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ================= RODAPÉ ================= */
+
+#rodape{
+
+    width:100%;
+
+    margin-top:auto;
+
+    background:var(--marrom);
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+}
 
 #rodape h2{
 
-
-    margin:5px;
-
+    margin-bottom:10px;
 
 }
-
-
-
-
 
 #rodape p{
 
-
     margin-top:10px;
 
-
 }
-
-
-
-
-
-
-
 
 /* ================= RESPONSIVO ================= */
 
+@media(max-width:768px){
 
+    #cabecalho{
 
-@media(max-width:700px){
+        flex-direction:column;
 
+        height:auto;
 
+        gap:15px;
 
-#cabecalho{
+        padding:20px;
 
+    }
 
-    padding:20px;
+    #login{
 
+        width:90%;
 
-}
-
-
-
-#logo{
-
-
-    font-size:24px;
-
-
-}
-
-
-
-
-#menu img{
-
-
-    width:25px;
-
-
-    height:25px;
-
-
-}
-
-
-
-#login{
-
-
-    width:90%;
-
-
-}
-
-
-
-#pesquisa input{
-
-
-    width:85%;
-
-
-}
-
+    }
 
 }

@@ -63,9 +63,7 @@ const montaCards = (lista) => {
         `;
 
 
-
         let botao = card.querySelector(".btn-add");
-
 
 
         botao.addEventListener("click",()=>{
@@ -77,9 +75,7 @@ const montaCards = (lista) => {
         });
 
 
-
         sectionCards.appendChild(card);
-
 
 
     });
@@ -87,9 +83,6 @@ const montaCards = (lista) => {
 
 
 };
-
-
-
 
 
 // ADICIONAR AO CARRINHO
@@ -104,10 +97,7 @@ const adicionarCarrinho = (produto)=>{
     ) || [];
 
 
-
-
     carrinho.push(produto);
-
 
 
     localStorage.setItem(
@@ -117,7 +107,6 @@ const adicionarCarrinho = (produto)=>{
         JSON.stringify(carrinho)
 
     );
-
 
 
     alert(
@@ -130,9 +119,6 @@ const adicionarCarrinho = (produto)=>{
 
 
 };
-
-
-
 
 
 
@@ -160,8 +146,6 @@ const criarMenu = ()=>{
 
 
     });
-
-
 
 
 
@@ -193,12 +177,6 @@ const criarMenu = ()=>{
 
 
     menuSecoes.appendChild(todos);
-
-
-
-
-
-
 
     secoes.forEach((secao)=>{
 
@@ -252,10 +230,6 @@ const criarMenu = ()=>{
 };
 
 
-
-
-
-
 // PESQUISA
 
 pesquisa.addEventListener("keyup",()=>{
@@ -277,15 +251,10 @@ pesquisa.addEventListener("keyup",()=>{
     });
 
 
-
     montaCards(resultado);
 
 
-
 });
-
-
-
 
 
 
