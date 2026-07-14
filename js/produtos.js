@@ -87,8 +87,7 @@ const montaCards = (lista) => {
 
 // ADICIONAR AO CARRINHO
 
-const adicionarCarrinho = (produto)=>{
-
+const adicionarCarrinho = (produto) => {
 
     let carrinho = JSON.parse(
 
@@ -96,9 +95,24 @@ const adicionarCarrinho = (produto)=>{
 
     ) || [];
 
+    // Verifica se o produto já existe no carrinho
+    let produtoExiste = carrinho.find(function(item){
 
-    carrinho.push(produto);
+        return item.id_produto == produto.id_produto;
 
+    });
+
+    if(produtoExiste){
+
+        produtoExiste.quantidade++;
+
+    }else{
+
+        produto.quantidade = 1;
+
+        carrinho.push(produto);
+
+    }
 
     localStorage.setItem(
 
@@ -108,15 +122,8 @@ const adicionarCarrinho = (produto)=>{
 
     );
 
-
-    alert(
-
-        produto.descricao_produto + 
-        " adicionado ao carrinho!"
-
-    );
-
-
+    // Redireciona para o carrinho
+    window.location.href = "paginas/carrinho.html";
 
 };
 
