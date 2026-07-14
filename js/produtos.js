@@ -1,273 +1,161 @@
 // IMPORTANDO OS PRODUTOS
 import { produtos } from "./lista_produtos.js";
 
-
 console.log("Produtos Maison Crochê carregado");
 
-
-
 // ELEMENTOS DO HTML
-
 const sectionCards = document.querySelector("#cards");
-
 const menuSecoes = document.querySelector("#menu-secoes");
-
 const pesquisa = document.querySelector("#pesquisa");
 
-
-
-
 // MOSTRAR PRODUTOS
-
 const montaCards = (lista) => {
-
 
     sectionCards.innerHTML = "";
 
-
-
-    lista.forEach((produto)=>{
-
+    lista.forEach((produto) => {
 
         let card = document.createElement("div");
 
         card.className = "card";
 
-
-
         card.innerHTML = `
+            <img
+                src="${produto.caminho_imagem}"
+                alt="${produto.descricao_produto}">
 
-
-            <img 
-            src="${produto.caminho_imagem}" 
-            alt="${produto.descricao_produto}">
-
-
-            <p>
-            ${produto.descricao_produto}
-            </p>
-
+            <p>${produto.descricao_produto}</p>
 
             <h2>
-            R$ ${parseFloat(produto.valor_unitario)
-            .toFixed(2)
-            .replace(".",",")}
+                R$ ${parseFloat(produto.valor_unitario)
+                    .toFixed(2)
+                    .replace(".", ",")}
             </h2>
 
-
             <button class="btn-add">
-            Adicionar
+                Adicionar
             </button>
-
-
         `;
-
 
         let botao = card.querySelector(".btn-add");
 
-
-        botao.addEventListener("click",()=>{
-
-
+        botao.addEventListener("click", () => {
             adicionarCarrinho(produto);
-
-
         });
-
 
         sectionCards.appendChild(card);
 
-
     });
-
-
 
 };
 
-
 // ADICIONAR AO CARRINHO
-
 const adicionarCarrinho = (produto) => {
 
-    let carrinho = JSON.parse(
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-        localStorage.getItem("carrinho")
+    // Procura se o produto já existe
+    let produtoExiste = carrinho.find(item => item.id_produto === produto.id_produto);
 
-    ) || [];
-
-    // Verifica se o produto já existe no carrinho
-    let produtoExiste = carrinho.find(function(item){
-
-        return item.id_produto == produto.id_produto;
-
-    });
-
-    if(produtoExiste){
+    if (produtoExiste) {
 
         produtoExiste.quantidade++;
 
-    }else{
+    } else {
 
-        produto.quantidade = 1;
-
-        carrinho.push(produto);
+        carrinho.push({
+            ...produto,
+            quantidade: 1
+        });
 
     }
 
-    localStorage.setItem(
+    // Salva no localStorage
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
-        "carrinho",
-
-        JSON.stringify(carrinho)
-
-    );
-
-    // Redireciona para o carrinho
-    window.location.href = "paginas/carrinho.html";
+    // Vai para o carrinho
+    window.location.href = "./paginas/carrinho.html";
 
 };
 
-
-
 // CRIAR MENU DE CATEGORIAS
+const criarMenu = () => {
 
-const criarMenu = ()=>{
-
-
-    menuSecoes.innerHTML="";
-
-
+    menuSecoes.innerHTML = "";
 
     let secoes = [];
 
+    produtos.forEach((produto) => {
 
-
-    produtos.forEach((produto)=>{
-
-
-        if(!secoes.includes(produto.secao)){
+        if (!secoes.includes(produto.secao)) {
 
             secoes.push(produto.secao);
 
         }
 
-
     });
-
-
 
     let todos = document.createElement("li");
 
-
     todos.innerHTML = `
-
-    <a href="#" class="lnk-secao">
-
-    Todos
-
-    </a>
-
+        <a href="#" class="lnk-secao">
+            Todos
+        </a>
     `;
 
-
-
-    todos.addEventListener("click",(e)=>{
-
+    todos.addEventListener("click", (e) => {
 
         e.preventDefault();
 
         montaCards(produtos);
 
-
     });
-
-
 
     menuSecoes.appendChild(todos);
 
-    secoes.forEach((secao)=>{
-
+    secoes.forEach((secao) => {
 
         let li = document.createElement("li");
 
-
         li.innerHTML = `
-
-        <a href="#" class="lnk-secao">
-
-        ${secao}
-
-        </a>
-
+            <a href="#" class="lnk-secao">
+                ${secao}
+            </a>
         `;
 
-
-
-        li.addEventListener("click",(e)=>{
-
+        li.addEventListener("click", (e) => {
 
             e.preventDefault();
 
-
-
-            let filtrados = produtos.filter(
-
-                produto=>produto.secao == secao
-
-            );
-
-
+            let filtrados = produtos.filter(produto => produto.secao === secao);
 
             montaCards(filtrados);
 
-
-
         });
-
-
 
         menuSecoes.appendChild(li);
 
-
-
     });
-
-
 
 };
 
-
 // PESQUISA
-
-pesquisa.addEventListener("keyup",()=>{
-
+pesquisa.addEventListener("keyup", () => {
 
     let texto = pesquisa.value.toLowerCase();
 
-
-
-    let resultado = produtos.filter((produto)=>{
-
+    let resultado = produtos.filter((produto) => {
 
         return produto.descricao_produto
-        .toLowerCase()
-        .includes(texto);
-
-
+            .toLowerCase()
+            .includes(texto);
 
     });
 
-
     montaCards(resultado);
-
 
 });
 
-
-
 // INICIAR PÁGINA
-
-
 montaCards(produtos);
-
 criarMenu();
