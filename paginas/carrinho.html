@@ -8,7 +8,7 @@
 
     <title>Carrinho - Maison Crochê</title>
 
-    <link rel="stylesheet" href="../css/style_estutura_pagina.css">
+    <link rel="stylesheet" href="../css/style_estrutura_pagina.css">
     <link rel="stylesheet" href="../css/style_carrinho.css">
 
 </head>
@@ -27,13 +27,29 @@
 
             <ul>
 
-                <li><a href="../index.html">Início</a></li>
+                <li>
+                    <a href="../index.html">
+                        Início
+                    </a>
+                </li>
 
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li>
+                    <a href="cadastro.html">
+                        Cadastro
+                    </a>
+                </li>
 
-                <li><a href="sobre.html">Sobre</a></li>
+                <li>
+                    <a href="sobre.html">
+                        Sobre
+                    </a>
+                </li>
 
-                <li><a href="login.html">Login</a></li>
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
 
                 <li>
                     <a href="carrinho.html">
@@ -48,22 +64,97 @@
     </header>
 
     <section id="titulo">
+
         <h1>Carrinho de Compras</h1>
+
     </section>
 
     <section id="carrinho">
 
+        <!-- Produtos -->
         <div id="itens-carrinho">
 
         </div>
 
-        <div id="acoes-carrinho">
+        <!-- Resumo -->
+        <aside id="resumo">
 
-            <a href="../index.html" id="btn-continuar">
-                ← Continuar comprando
+            <div class="caixa-resumo">
+
+                <h3>CEP</h3>
+
+                <input
+                    type="text"
+                    id="cep"
+                    placeholder="Digite o CEP">
+
+                <button id="btn-frete">
+                    Calcular Frete
+                </button>
+
+            </div>
+
+            <div class="caixa-resumo">
+
+                <h3>Resumo do Pedido</h3>
+
+                <div class="linha-resumo">
+
+                    <span>Valor Total</span>
+
+                    <strong id="valor-total">
+
+                        R$ 0,00
+
+                    </strong>
+
+                </div>
+
+                <div class="linha-resumo">
+
+                    <span>Valor do Frete</span>
+
+                    <strong id="valor-frete">
+
+                        R$ 5,00
+
+                    </strong>
+
+                </div>
+
+                <hr>
+
+                <div class="linha-resumo total">
+
+                    <span>Total a Pagar</span>
+
+                    <strong id="valor-pagar">
+
+                        R$ 5,00
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <a
+                href="../index.html"
+                class="btn-continuar">
+
+                Continuar Comprando
+
             </a>
 
-        </div>
+            <button
+                class="btn-finalizar"
+                onclick="finalizarCompra()">
+
+                Finalizar Compra
+
+            </button>
+
+        </aside>
 
     </section>
 
@@ -72,7 +163,9 @@
         <h2>&copy; 2026 Maison Crochê</h2>
 
         <p>
+
             Formas de pagamento: Pix, Cartões de Débito e Crédito.
+
         </p>
 
     </footer>
@@ -82,4 +175,5 @@
 <script src="../js/carrinho.js"></script>
 
 </body>
+
 </html>
