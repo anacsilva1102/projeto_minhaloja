@@ -55,7 +55,7 @@ const adicionarCarrinho = (produto) => {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
     // Procura se o produto já existe
-    let produtoExiste = carrinho.find(item => item.id_produto === produto.id_produto);
+    let produtoExiste = carrinho.find(item => item.id === produto.id);
 
     if (produtoExiste) {
 
