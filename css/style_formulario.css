@@ -1,348 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+@import url("style_estrutura_pagina.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
-*{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Roboto,sans-serif;
-
-}
-
-:root{
-
-    --marrom:#8b5e3c;
-    --marrom-escuro:#6e472c;
-    --creme:#fff8f0;
-    --bege:#f0dfcd;
-    --branco:#ffffff;
-
-}
+/*CONFIGURAÇÕES GERAIS*/
 
 body{
-
-    background:var(--creme);
-    color:#4b3528;
-
+    font-family: "Roboto", sans-serif;
 }
 
-#geral{
+/*CORES*/
 
-    width:100%;
-    min-height:100vh;
+:root{
+    --cor01:#6A1B9A;
+    --cor02:#6D2191;
+    --cor03:#9D74C4;
+    --cor04:#9368BB;
+    --cor05:#8B50CF;
+    --branca:#FFFFFF;
+    --cinza:#666666;
+    --borda:#E8E8E8;
 
-    display:flex;
-    flex-direction:column;
-
+    --sombra:0 12px 30px rgba(106,27,154,.18);
 }
 
-/* ================= CABEÇALHO ================= */
-
-#cabecalho{
-
-    width:100%;
-    height:100px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:20px 80px;
-
-    background:var(--branco);
-
-    box-shadow:0 3px 15px rgba(0,0,0,.1);
-
-}
-
-#logo{
-
-    font-size:35px;
-    font-weight:bold;
-
-}
-
-#logo a{
-
-    text-decoration:none;
-    color:var(--marrom);
-
-}
-
-#menu ul{
-
-    list-style:none;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:30px;
-
-}
-
-#menu img{
-
-    width:35px;
-
-    transition:.3s;
-
-}
-
-#menu img:hover{
-
-    transform:scale(1.1);
-
-}
-
-/* ================= FORMULÁRIO ================= */
+/*FORMULÁRIO*/
 
 #form{
-
     width:700px;
-
+    min-height:600px;
     margin:50px auto;
-
-    background:var(--branco);
-
     padding:40px;
 
-    border-radius:20px;
+    background:var(--branca);
 
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    border:1px solid var(--borda);
+    border-radius:16px;
 
+    box-shadow:var(--sombra);
 }
 
 #form h3{
-
     text-align:center;
-
-    color:var(--marrom);
-
-    font-size:32px;
-
+    font-size:30px;
+    font-weight:700;
+    color:var(--cor02);
     margin-bottom:30px;
-
 }
 
 #frm-pessoa{
-
     display:flex;
-
     flex-direction:column;
-
 }
 
 #frm-pessoa label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
 
-    margin-top:15px;
+    font-size:15px;
+    font-weight:500;
 
-    margin-bottom:6px;
-
-    font-weight:bold;
-
+    color:var(--cor01);
 }
 
+/*CAMPOS*/
+
 .input001,
-.input002{
-
+.input002,
+select{
     width:100%;
+    height:50px;
 
-    height:45px;
+    padding:0 14px;
 
-    padding:12px;
-
-    border:1px solid #ccc;
-
+    border:2px solid var(--cor03);
     border-radius:10px;
 
-    outline:none;
+    background:#fafafa;
+    color:#333;
 
+    font-size:15px;
+
+    outline:none;
     transition:.3s;
 
+    box-sizing:border-box;
 }
 
 .input001:focus,
-.input002:focus{
-
-    border-color:var(--marrom);
-
-    box-shadow:0 0 5px rgba(139,94,60,.3);
-
+.input002:focus,
+select:focus{
+    background:var(--branca);
+    border-color:var(--cor02);
+    box-shadow:0 0 10px rgba(109,33,145,.25);
 }
 
-/* ================= CHECKBOX ================= */
-
-#check{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    margin-top:20px;
-
+.input001::placeholder,
+.input002::placeholder{
+    color:#999;
 }
 
-#novidades{
+/*CHECKBOX*/
 
-    width:18px;
-
-    height:18px;
-
+#novidades,
+#lembrar{
+    margin-right:8px;
+    cursor:pointer;
 }
 
-/* ================= BOTÕES ================= */
-
-#botoes{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    margin-top:35px;
-
-}
+/*BOTÕES*/
 
 .btnCadastrar,
 .btnLimpar{
-
-    width:180px;
-
-    height:45px;
-
+    width:100%;
+    height:50px;
+    margin-top:18px;
     border:none;
-
-    border-radius:30px;
-
-    cursor:pointer;
-
+    border-radius:10px;
     font-size:16px;
-
-    font-weight:bold;
-
+    font-weight:600;
+    cursor:pointer;
     transition:.3s;
-
 }
 
 .btnCadastrar{
-
-    background:var(--marrom);
-
-    color:white;
-
+    background:var(--cor02);
+    color:var(--branca);
 }
 
 .btnCadastrar:hover{
-
-    background:var(--marrom-escuro);
-
+    background:var(--cor01);
+    transform:translateY(-2px);
 }
 
 .btnLimpar{
-
-    background:#d9d9d9;
-
-    color:#4b3528;
-
+    background:var(--cor03);
+    color:var(--branca);
 }
 
 .btnLimpar:hover{
-
-    background:#bfbfbf;
-
+    background:#7A36B4;
+    transform:translateY(-2px);
 }
 
-/* ================= RODAPÉ ================= */
+/*LINK DE CADASTRO (LOGIN)*/
 
-#rodape{
-
-    width:100%;
-
-    margin-top:auto;
-
-    background:var(--marrom);
-
-    color:white;
-
+.cadastro-link{
+    margin-top:25px;
     text-align:center;
-
-    padding:35px;
-
 }
 
-#rodape h2{
-
-    margin-bottom:10px;
-
+.cadastro-link p{
+    margin-bottom:8px;
+    color:var(--cinza);
+    font-size:15px;
 }
 
-#rodape p{
-
-    margin-top:10px;
-
+.cadastro-link a{
+    color:var(--cor02);
+    font-weight:bold;
+    text-decoration:none;
+    transition:.3s;
 }
 
-/* ================= RESPONSIVO ================= */
+.cadastro-link a:hover{
+    color:var(--cor01);
+    text-decoration:underline;
+}
 
-@media(max-width:768px){
+/*RESPONSIVO*/
 
-    #cabecalho{
-
-        flex-direction:column;
-
-        height:auto;
-
-        gap:20px;
-
-        padding:20px;
-
-    }
-
-    #logo{
-
-        font-size:28px;
-
-    }
-
-    #menu ul{
-
-        gap:15px;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-    }
-
-    #menu img{
-
-        width:28px;
-
-    }
+@media (max-width:768px){
 
     #form{
-
         width:95%;
-
+        margin:25px auto;
         padding:25px;
-
     }
 
-    #botoes{
-
-        flex-direction:column;
-
+    #form h3{
+        font-size:26px;
     }
 
+    .input001,
+    .input002,
+    select,
     .btnCadastrar,
     .btnLimpar{
-
-        width:100%;
-
+        height:46px;
     }
 
 }

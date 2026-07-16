@@ -1,367 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+/* IMPORTANDO OS SELETORES DO ARQUIVO style_estrutura_pagina.css */
+@import url(style_estrutura_pagina.css);
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Roboto,sans-serif;
-}
-
-:root{
-    --marrom:#8b5e3c;
-    --marrom-escuro:#6e472c;
-    --creme:#fff8f0;
-    --branco:#ffffff;
-}
-
-body{
-    background:var(--creme);
-    color:#4b3528;
-}
-
-#geral{
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-}
-
-/* ================= CABEÇALHO ================= */
-
-#cabecalho{
-    width:100%;
-    height:90px;
-    background:var(--branco);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 70px;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
-#logo a{
-    text-decoration:none;
-    font-size:40px;
-    font-weight:bold;
-    color:var(--marrom);
-}
-
-#menu ul{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-#menu a{
-    text-decoration:none;
-    color:#4b3528;
-    font-weight:600;
-}
-
-#menu a:hover{
-    color:var(--marrom);
-}
-
-#menu img{
-    width:35px;
-}
-
-/* ================= TÍTULO ================= */
-
-#titulo{
-    text-align:center;
-    margin:40px 0;
-}
-
-#titulo h1{
-    color:var(--marrom);
-    font-size:42px;
-}
-
-/* ================= CARRINHO ================= */
-
+/* FORMATANDO A SECTION CARRINHO */
 #carrinho{
-    width:90%;
-    max-width:1300px;
-    margin:0 auto 50px;
+    width:1100px;
+    max-width:95%;
+    margin:40px auto;
     display:flex;
-    justify-content:space-between;
     align-items:flex-start;
-    gap:35px;
+    justify-content:space-between;
+    gap:30px;
 }
 
-#itens-carrinho{
+/* FORMATANDO A SECTION LISTA DE PRODUTOS */
+#listaProdutos{
     flex:3;
-    display:flex;
-    flex-direction:column;
-    gap:30px;
+    background:var(--branca);
+    padding:25px;
+    border:1px solid #e5e5e5;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
 }
 
-.item{
-    background:#fff;
-    display:flex;
-    gap:30px;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+#listaProdutos h1{
+    text-align:center;
+    color:var(--cor02);
+    margin-bottom:25px;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.img-item{
-    width:180px;
+#listaProdutos table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+#listaProdutos th{
+    background:var(--cor02);
+    color:var(--branca);
+    padding:15px;
+    font-size:15px;
+}
+
+#listaProdutos td{
+    padding:18px 12px;
+    text-align:center;
+    vertical-align:middle;
+    border-bottom:1px solid #ececec;
+}
+
+#listaProdutos td:first-child{
+    text-align:left;
+}
+
+#listaProdutos tr:hover{
+    background:#faf7fd;
+}
+
+#listaProdutos img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+/* FORMATANDO O CONTROLE DE QUANTIDADE */
+.controleQuantidade{
     display:flex;
+    align-items:center;
     justify-content:center;
-    align-items:center;
+    gap:5px;
 }
 
-.img-item img{
-    width:130px;
-    height:170px;
-    object-fit:cover;
-    border-radius:15px;
-}
-
-.dados-item{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.dados-item h3{
-    color:var(--marrom);
-    font-size:34px;
-}
-
-.dados-item p{
-    font-size:22px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.dados-item strong{
-    color:#3f2d22;
-}
-
-/* BOTÕES + E - */
-
-.dados-item p button{
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    background:var(--marrom);
-    color:#fff;
-    font-size:22px;
+.controleQuantidade button{
+    width:25px;
+    height:25px;
+    border:1px solid var(--cor02);
+    background:var(--branca);
+    color:var(--cor02);
+    border-radius:3px;
     cursor:pointer;
-    transition:.3s;
-}
-
-.dados-item p button:hover{
-    background:var(--marrom-escuro);
-}
-
-/* BOTÕES */
-
-.btn-add{
-    width:180px;
-    height:48px;
-    border:none;
-    border-radius:30px;
-    background:var(--marrom);
-    color:#fff;
-    font-size:17px;
     font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
 }
 
-.btn-add:hover{
-    background:var(--marrom-escuro);
+.controleQuantidade button:hover{
+    background:#9d6edb;
+    color:var(--branca);
 }
 
-hr{
-    margin:30px 0;
+.controleQuantidade input{
+    width:35px;
+    height:25px;
+    text-align:center;
+    border:1px solid var(--cor02);
+    border-radius:3px;
+}
+
+.quantidade{
+    width:40px;
+    height:28px;
+    text-align:center;
+    border:1px solid var(--cor02);
+    border-radius:3px;
+    background:var(--branca);
+    outline:none;
+    font-size:14px;
+}
+
+/* FORMATANDO O BOTÃO REMOVER */
+.btnRemover{
+    background:var(--cor02);
+    color:var(--branca);
     border:none;
-    border-top:2px solid #ddd;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-#itens-carrinho h2{
-    color:var(--marrom);
+.btnRemover:hover{
+    background:#972020;
 }
 
-/* ================= RESUMO DO PEDIDO ================= */
-
+/* FORMATANDO A DIV RESUMO */
 #resumo{
     flex:1;
-    background:var(--branco);
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    background:var(--branca);
+    padding:20px;
+    border:1px solid #ddd;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
     position:sticky;
     top:20px;
 }
 
-#resumo h3{
-    color:var(--marrom);
-    font-size:30px;
-    margin-bottom:25px;
+#resumo h2{
     text-align:center;
+    color:var(--cor02);
+    margin-bottom:20px;
+    text-transform:uppercase;
+    font-size:22px;
 }
 
-#resumo label{
-    display:block;
-    font-size:18px;
-    font-weight:bold;
-    color:#4b3528;
-    margin-bottom:10px;
-}
-
-#cep{
-    width:100%;
-    height:48px;
+.boxResumo{
+    border:1px solid #ddd;
+    border-radius:8px;
     padding:12px;
-    border:1px solid #d6c5b6;
-    border-radius:10px;
-    background:var(--creme);
-    font-size:16px;
-    margin-bottom:25px;
-    outline:none;
+    margin-bottom:15px;
+    background:#fafafa;
 }
 
-#cep:focus{
-    border:2px solid var(--marrom);
+.boxResumo strong{
+    display:block;
+    color:var(--cor02);
+    margin-bottom:6px;
 }
 
-.info-resumo{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
-    border-bottom:1px solid #e8e8e8;
+.boxResumo p,
+.boxResumo h3{
+    margin:0;
 }
 
-.info-resumo h4{
-    font-size:18px;
-    color:#4b3528;
+.boxResumo h3{
+    color:var(--cor01);
+    font-size:22px;
 }
 
-.info-resumo p{
-    font-size:20px;
-    color:var(--marrom);
-    font-weight:bold;
-}
-
-#btn-continuar-compra,
-#btn-finalizar-compra{
+#resumo input{
     width:100%;
-    height:50px;
-    margin-top:18px;
-    border:none;
-    border-radius:30px;
-    background:var(--marrom);
-    color:#fff;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
+    height:42px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    outline:none;
     transition:.3s;
 }
 
-#btn-continuar-compra:hover,
-#btn-finalizar-compra:hover{
-    background:var(--marrom-escuro);
+#resumo input:focus{
+    border-color:var(--cor02);
+    box-shadow:0 0 8px rgba(106,27,154,.25);
 }
 
-/* ================= RODAPÉ ================= */
-
-#rodape{
-    margin-top:auto;
+/* FORMATANDO OS BOTÕES */
+.btnContinuar,
+.btnFinalizar{
     width:100%;
-    background:var(--marrom);
-    color:#fff;
+    height:48px;
+    margin-top:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+    line-height:48px;
     text-align:center;
-    padding:30px;
+    transition:.3s;
 }
 
-#rodape h2{
-    margin-bottom:10px;
+.btnContinuar{
+    background:var(--cor03);
+    color:var(--branca);
 }
 
-#rodape p{
-    font-size:16px;
+.btnContinuar:hover{
+    background:var(--cor01);
 }
 
-/* ================= RESPONSIVO ================= */
+.btnFinalizar{
+    background:var(--cor02);
+    color:var(--branca);
+}
 
-@media(max-width:1000px){
+.btnFinalizar:hover{
+    background:var(--cor01);
+}
+
+/* RESPONSIVIDADE */
+@media(max-width:900px){
 
     #carrinho{
         flex-direction:column;
     }
 
+    #listaProdutos,
     #resumo{
         width:100%;
+    }
+
+    #resumo{
         position:static;
-    }
-
-}
-
-@media(max-width:900px){
-
-    #cabecalho{
-        padding:20px;
-        flex-direction:column;
-        height:auto;
-        gap:20px;
-    }
-
-    .item{
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
-    }
-
-    .dados-item{
-        align-items:center;
-    }
-
-    .dados-item h3{
-        font-size:28px;
-    }
-
-    .dados-item p{
-        font-size:18px;
-        justify-content:center;
-    }
-
-}
-
-@media(max-width:600px){
-
-    #logo a{
-        font-size:28px;
-    }
-
-    #menu ul{
-        gap:15px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    #menu img{
-        width:28px;
-    }
-
-    .img-item img{
-        width:110px;
-        height:140px;
-    }
-
-    .btn-add,
-    #btn-continuar-compra,
-    #btn-finalizar-compra{
-        width:100%;
     }
 
 }

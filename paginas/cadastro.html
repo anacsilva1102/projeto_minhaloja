@@ -4,230 +4,195 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cadastro - Maison Crochê</title>
 
     <link rel="stylesheet" href="../css/style_formulario.css">
- 
+
 </head>
 
 <body>
 
-<main id="geral">
+    <main id="geral">
 
-    <header id="cabecalho">
+        <header id="cabecalho">
 
-        <div id="logo">
-
-            <a href="../index.html">Maison Crochê</a>
-
-        </div>
-
-        <nav id="menu">
-
-            <ul>
-
-                <li>
-
-                    <a href="../index.html">
-
-                        <img src="../imagens/icones/inicio.png" alt="Início">
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="cadastro.html">
-
-                        <img src="../imagens/icones/cadastro.png" alt="Cadastro">
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="sobre.html">
-
-                        <img src="../imagens/icones/sobre.png" alt="Sobre">
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="login.html">
-
-                        <img src="../imagens/icones/login.png" alt="Login">
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a href="carrinho.html">
-
-                        <img src="../imagens/icones/carrinho.png" alt="Carrinho">
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <section id="form">
-
-        <h3>Cadastro de Pessoas</h3>
-
-        <form id="frm-pessoa">
-
-            <label for="nome">Nome</label>
-
-            <input
-                type="text"
-                id="nome"
-                class="input001"
-                maxlength="60"
-                placeholder="Digite seu nome"
-                required>
-
-            <label for="cpf">CPF</label>
-
-            <input
-                type="text"
-                id="cpf"
-                class="input002"
-                maxlength="14"
-                placeholder="Digite seu CPF"
-                required>
-
-            <label for="telefone">Telefone</label>
-
-            <input
-                type="text"
-                id="telefone"
-                class="input002"
-                maxlength="15"
-                placeholder="Digite seu telefone"
-                required>
-
-            <label for="email">E-mail</label>
-
-            <input
-                type="email"
-                id="email"
-                class="input001"
-                maxlength="60"
-                placeholder="Digite seu e-mail"
-                required>
-
-            <label for="dataNascimento">Data de Nascimento</label>
-
-            <input
-                type="date"
-                id="dataNascimento"
-                class="input002"
-                required>
-
-            <label for="cep">CEP</label>
-
-            <input
-                type="text"
-                id="cep"
-                class="input002"
-                maxlength="9"
-                placeholder="Digite seu CEP"
-                required>
-
-            <label for="logradouro">Logradouro</label>
-
-            <input
-                type="text"
-                id="logradouro"
-                class="input001"
-                placeholder="Digite seu logradouro"
-                required>
-
-            <label for="numero">Número</label>
-
-            <input
-                type="number"
-                id="numero"
-                class="input002"
-                placeholder="Digite o número"
-                required>
-
-            <label for="complemento">Complemento</label>
-
-            <input
-                type="text"
-                id="complemento"
-                class="input001"
-                placeholder="Digite o complemento">
-
-            <label for="bairro">Bairro</label>
-
-            <input
-                type="text"
-                id="bairro"
-                class="input001"
-                placeholder="Digite o bairro"
-                required>
-
-            <label for="cidade">Cidade</label>
-
-            <input
-                type="text"
-                id="cidade"
-                class="input001"
-                placeholder="Digite a cidade"
-                required>
-
-            <label for="estado">Estado (UF)</label>
-
-            <input
-                type="text"
-                id="estado"
-                class="input002"
-                maxlength="2"
-                placeholder="Ex: SE"
-                required>
-
-            <label for="senha">Senha</label>
-
-            <input
-                type="password"
-                id="senha"
-                class="input002"
-                maxlength="20"
-                placeholder="Digite sua senha"
-                required>
-
-            <div id="check">
-
-                <input
-                    type="checkbox"
-                    id="novidades">
-
-                <label for="novidades">
-
-                    Desejo receber novidades por e-mail.
-
-                </label>
-
+            <div id="logo">
+                Maison Crochê
             </div>
 
-            <div id="botoes">
+            <nav id="menu">
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html">
+                            <img src="../imagens/icones/inicio.png" alt="Início" title="Início">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cadastro.html">
+                            <img src="../imagens/icones/cadastro.png" alt="Cadastro" title="Cadastro">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="sobre.html">
+                            <img src="../imagens/icones/sobre.png" alt="Sobre" title="Sobre">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">
+                            <img src="../imagens/icones/login.png" alt="Login" title="Login">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="carrinho.html">
+                            <img src="../imagens/icones/carrinho.png" alt="Carrinho" title="Carrinho">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <section id="pesquisa">
+
+            <h3>Cadastro de Cliente</h3>
+
+        </section>
+
+        <section id="form">
+
+            <form id="frm-pessoa">
+
+                <label for="nome">Nome Completo</label>
+                <input
+                    class="input001"
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Digite seu nome completo"
+                    required>
+
+                <label for="cpf">CPF</label>
+                <input
+                    class="input001"
+                    type="text"
+                    name="cpf"
+                    id="cpf"
+                    placeholder="000.000.000-00"
+                    required>
+
+                <label for="data">Data de Nascimento</label>
+                <input
+                    class="input001"
+                    type="date"
+                    name="data"
+                    id="data"
+                    required>
+
+                <label for="telefone">Telefone</label>
+                <input
+                    class="input001"
+                    type="tel"
+                    name="telefone"
+                    id="telefone"
+                    placeholder="(79) 99999-9999"
+                    required>
+
+                <label for="cep">CEP</label>
+                <input
+                    class="input001"
+                    type="text"
+                    name="cep"
+                    id="cep"
+                    placeholder="49000-000">
+
+                <label for="email">E-mail</label>
+                <input
+                    class="input001"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="email@exemplo.com"
+                    required>
+
+                <label for="endereco">Endereço</label>
+                <input
+                    class="input001"
+                    type="text"
+                    name="endereco"
+                    id="endereco"
+                    placeholder="Rua, Número"
+                    required>
+
+                <label for="bairro">Bairro</label>
+                <input
+                    class="input001"
+                    type="text"
+                    name="bairro"
+                    id="bairro"
+                    required>
+
+                <label for="cidade">Cidade</label>
+                <input
+                    class="input001"
+                    type="text"
+                    name="cidade"
+                    id="cidade"
+                    required>
+
+                <label for="estado">Estado</label>
+
+                <select
+                    class="input001"
+                    name="estado"
+                    id="estado"
+                    required>
+
+                    <option value="">Selecione</option>
+                    <option>Sergipe</option>
+                    <option>Bahia</option>
+                    <option>Alagoas</option>
+                    <option>Pernambuco</option>
+                    <option>Paraíba</option>
+                    <option>Rio Grande do Norte</option>
+
+                </select>
+
+                <label for="senha">Senha</label>
+                <input
+                    class="input001"
+                    type="password"
+                    name="senha"
+                    id="senha"
+                    required>
+
+                <label for="confirmar">Confirmar Senha</label>
+                <input
+                    class="input001"
+                    type="password"
+                    name="confirmar"
+                    id="confirmar"
+                    required>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="novidades"
+                        id="novidades">
+
+                    Desejo receber novidades e promoções da Maison Crochê.
+
+                </label>
 
                 <input
                     type="submit"
@@ -239,29 +204,21 @@
                     value="Limpar"
                     class="btnLimpar">
 
-            </div>
+            </form>
 
-        </form>
+        </section>
 
-    </section>
+        <footer id="rodape">
 
-    <footer id="rodape">
+            <h2>&copy; 2026 Maison Crochê</h2>
 
-        <h2>&copy; Maison Crochê</h2>
+            <p>
+                Formas de pagamento: Pix, Cartão de Débito e Crédito.
+            </p>
 
-        <h2>Exclusividade em cada ponto.</h2>
+        </footer>
 
-        <p>
-
-            Formas de pagamento: Pix, Cartão de Débito e Crédito.
-
-        </p>
-
-    </footer>
-
-</main>
-
-<script src="../js/cadastro.js"></script>
+    </main>
 
 </body>
 

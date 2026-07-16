@@ -4,161 +4,146 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login - Maison Crochê</title>
 
-    <link rel="stylesheet" href="../css/style_login.css">
+    <link rel="stylesheet" href="../css/style_formulario.css">
 
 </head>
 
 <body>
 
-<main id="geral">
+    <main id="geral">
 
-    <header id="cabecalho">
+        <header id="cabecalho">
 
-        <div id="logo">
+            <div id="logo">
 
-            Maison Crochê
+                <h1>Maison Crochê</h1>
 
-        </div>
+            </div>
 
-        <nav id="menu">
+            <nav id="menu">
 
-            <ul>
+                <ul>
 
-                <li>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../imagens/icones/inicio.png" alt="Início" title="Início">
+                        </a>
+                    </li>
 
-                    <a href="../index.html">
+                    <li>
+                        <a href="sobre.html">
+                            <img src="../imagens/icones/sobre.png" alt="Sobre" title="Sobre">
+                        </a>
+                    </li>
 
-                        <img src="../imagens/icones/inicio.png" alt="Início">
+                    <li>
+                        <a href="login.html">
+                            <img src="../imagens/icones/login.png" alt="Login" title="Login">
+                        </a>
+                    </li>
 
-                    </a>
+                    <li>
+                        <a href="cadastro.html">
+                            <img src="../imagens/icones/cadastro.png" alt="Cadastro" title="Cadastro">
+                        </a>
+                    </li>
 
-                </li>
+                    <li>
+                        <a href="carrinho.html">
+                            <img src="../imagens/icones/carrinho.png" alt="Carrinho" title="Carrinho">
+                        </a>
+                    </li>
 
-                <li>
+                </ul>
 
-                    <a href="cadastro.html">
+            </nav>
 
-                        <img src="../imagens/icones/cadastro.png" alt="Cadastro">
+        </header>
 
-                    </a>
+        <section id="pesquisa">
 
-                </li>
+            <h3>Login</h3>
 
-                <li>
+        </section>
 
-                    <a href="sobre.html">
+        <section id="form">
 
-                        <img src="../imagens/icones/sobre.png" alt="Sobre">
+            <form id="frm-pessoa">
 
-                    </a>
+                <label for="email">E-mail</label>
 
-                </li>
+                <input
+                    class="input001"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                    required>
 
-                <li>
+                <label for="senha">Senha</label>
 
-                    <a href="login.html">
+                <input
+                    class="input001"
+                    type="password"
+                    name="senha"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                    required>
 
-                        <img src="../imagens/icones/login.png" alt="Login">
+                <label>
 
-                    </a>
+                    <input
+                        type="checkbox"
+                        name="lembrar"
+                        id="lembrar">
 
-                </li>
+                    Lembrar meu acesso
 
-                <li>
-
-                    <a href="carrinho.html">
-
-                        <img src="../imagens/icones/carrinho.png" alt="Carrinho">
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <section id="login">
-
-        <h2>Entrar</h2>
-
-        <form id="frm-login">
-
-            <label for="email">
-
-                E-mail
-
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                class="input001"
-                placeholder="Digite seu e-mail"
-                required>
-
-            <label for="senha">
-
-                Senha
-
-            </label>
-
-            <input
-                type="password"
-                id="senha"
-                class="input001"
-                placeholder="Digite sua senha"
-                required>
-
-            <div id="botoes">
+                </label>
 
                 <input
                     type="submit"
                     value="Entrar"
-                    class="btnEntrar">
+                    class="btnCadastrar">
 
-            </div>
+                <input
+                    type="reset"
+                    value="Limpar"
+                    class="btnLimpar">
 
-            <p id="cadastre">
+                <div class="cadastro-link">
 
-                Não possui uma conta?
+                    <p>Não possui uma conta?</p>
 
-                <a href="cadastro.html">
+                    <a href="cadastro.html">
 
-                    Cadastre-se
+                        Cadastre-se aqui
 
-                </a>
+                    </a>
 
+                </div>
+
+            </form>
+
+        </section>
+
+        <footer id="rodape">
+
+            <h2>&copy;Maison Crochê</h2>
+
+            <p>
+                Formas de pagamento: Pix, Cartão de Débito e Crédito.
             </p>
 
-        </form>
+        </footer>
 
-    </section>
+    </main>
 
-    <footer id="rodape">
-
-        <h2>&copy; Maison Crochê</h2>
-
-        <h2>Exclusividade em cada ponto.</h2>
-
-        <p>
-
-            Formas de pagamento: Pix, Cartão de Débito e Crédito.
-
-        </p>
-
-    </footer>
-
-</main>
-
-<script src="../js/login.js"></script>
+    
 
 </body>
 
