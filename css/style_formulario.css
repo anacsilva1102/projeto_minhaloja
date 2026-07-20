@@ -10,16 +10,16 @@ body{
 /*CORES*/
 
 :root{
-    --cor01:#6A1B9A;
-    --cor02:#6D2191;
-    --cor03:#9D74C4;
-    --cor04:#9368BB;
-    --cor05:#8B50CF;
+    --cor01:#d7c3f2;
+    --cor02:#8b6fb8;
+    --cor03:#5412c7;
+    --cor04:#d7c3f2;
+    --cor05:#8b6fb8;
     --branca:#FFFFFF;
     --cinza:#666666;
-    --borda:#E8E8E8;
+    --borda:#d7c3f2;
 
-    --sombra:0 12px 30px rgba(106,27,154,.18);
+    --sombra:0 12px 30px rgba(139,111,184,.18);
 }
 
 /*FORMULÁRIO*/
@@ -91,7 +91,7 @@ select{
 select:focus{
     background:var(--branca);
     border-color:var(--cor02);
-    box-shadow:0 0 10px rgba(109,33,145,.25);
+    box-shadow:0 0 10px rgba(139,111,184,.25);
 }
 
 .input001::placeholder,
@@ -138,7 +138,7 @@ select:focus{
 }
 
 .btnLimpar:hover{
-    background:#7A36B4;
+    background:var(--cor02);
     transform:translateY(-2px);
 }
 

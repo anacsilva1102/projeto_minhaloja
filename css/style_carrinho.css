@@ -17,7 +17,7 @@
     flex:3;
     background:var(--branca);
     padding:25px;
-    border:1px solid #e5e5e5;
+    border:1px solid #d7c3f2;
     border-radius:20px;
     box-shadow:0 5px 20px rgba(0,0,0,.12);
 }
@@ -46,7 +46,7 @@
     padding:18px 12px;
     text-align:center;
     vertical-align:middle;
-    border-bottom:1px solid #ececec;
+    border-bottom:1px solid #d7c3f2;
 }
 
 #listaProdutos td:first-child{
@@ -54,7 +54,7 @@
 }
 
 #listaProdutos tr:hover{
-    background:#faf7fd;
+    background:#f3ebfc;
 }
 
 #listaProdutos img{
@@ -83,7 +83,7 @@
 }
 
 .controleQuantidade button:hover{
-    background:#9d6edb;
+    background:var(--cor02);
     color:var(--branca);
 }
 
@@ -118,7 +118,7 @@
 }
 
 .btnRemover:hover{
-    background:#972020;
+    background:var(--cor03);
 }
 
 /* FORMATANDO A DIV RESUMO */
@@ -126,7 +126,7 @@
     flex:1;
     background:var(--branca);
     padding:20px;
-    border:1px solid #ddd;
+    border:1px solid #d7c3f2;
     border-radius:15px;
     box-shadow:0 8px 20px rgba(0,0,0,.12);
     position:sticky;
@@ -142,11 +142,11 @@
 }
 
 .boxResumo{
-    border:1px solid #ddd;
+    border:1px solid #d7c3f2;
     border-radius:8px;
     padding:12px;
     margin-bottom:15px;
-    background:#fafafa;
+    background:#f3ebfc;
 }
 
 .boxResumo strong{
@@ -161,7 +161,7 @@
 }
 
 .boxResumo h3{
-    color:var(--cor01);
+    color:var(--cor03);
     font-size:22px;
 }
 
@@ -169,7 +169,7 @@
     width:100%;
     height:42px;
     padding:10px;
-    border:1px solid #ccc;
+    border:1px solid #d7c3f2;
     border-radius:6px;
     outline:none;
     transition:.3s;
@@ -177,7 +177,7 @@
 
 #resumo input:focus{
     border-color:var(--cor02);
-    box-shadow:0 0 8px rgba(106,27,154,.25);
+    box-shadow:0 0 8px rgba(139,111,184,.25);
 }
 
 /* FORMATANDO OS BOTÕES */
